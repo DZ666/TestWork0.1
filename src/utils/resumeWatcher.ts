@@ -183,3 +183,4 @@ export function watchMessages(onNewMessage: (msg: Message) => void): () => void 
   // Возвращаем функцию для остановки отслеживания
   return stop
 }
+ 

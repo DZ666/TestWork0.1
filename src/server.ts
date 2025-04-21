@@ -1,3 +1,6 @@
+// Регистрация псевдонимов путей для скомпилированного кода
+import 'module-alias/register';
+
 import express from 'express';
 import { connectToMongo } from '@db/mongo';
 import messageRoutes from '@routes/messages';

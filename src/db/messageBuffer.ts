@@ -232,7 +232,7 @@ export async function getAllMessages(limit = 100, skip = 0): Promise<Message[]> 
   try {
     const messages = (await messagesCollection
       .find()
-      .sort({ createdAt: -1 }) // Сначала новые
+      .sort({ createdAt: -1 }) // Сортировка по убыванию (сначала новые)
       .skip(skip)
       .limit(limit)
       .toArray()) as Message[]

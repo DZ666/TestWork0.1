@@ -1,11 +1,10 @@
 {
   "name": "message-queue-chat",
   "version": "1.0.0",
-  
   "description": "Чат с очередью сообщений на MongoDB",
   "main": "src/server.ts",
   "scripts": {
-    "start": "node dist/server.js",
+    "start": "node -r module-alias/register dist/server.js",
     "dev": "ts-node -r tsconfig-paths/register src/server.ts",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -29,6 +28,7 @@
   "homepage": "https://github.com/DZ666/TestWork0.1#readme",
   "dependencies": {
     "express": "^4.18.2",
+    "module-alias": "^2.2.3",
     "mongodb": "^6.3.0",
     "ws": "^8.16.0"
   },
@@ -46,5 +46,12 @@
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.8.3"
+  },
+  "_moduleAliases": {
+    "@db": "dist/db",
+    "@models": "dist/models",
+    "@routes": "dist/routes",
+    "@utils": "dist/utils",
+    "@ws": "dist/ws"
   }
 }

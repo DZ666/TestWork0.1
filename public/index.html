@@ -473,7 +473,9 @@
                 const messages = result.data || [];
                 
                 messageContainer.innerHTML = '';
-                messages.forEach(message => {
+                // Отображаем сообщения в хронологическом порядке (старые сверху, новые снизу)
+                // Так как с сервера приходят в обратном порядке (новые сначала), то переворачиваем массив
+                [...messages].reverse().forEach(message => {
                     addMessageToUI(message);
                 });
                 
